@@ -3,17 +3,16 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 require "base64"
-require 'seed_dumper'
 
 Gem::Specification.new do |s|
   s.name = "seed_dumper"
-  s.version = SeedDumper::VERSION
-  s.authors = ["Kevin Edwards"]
-  s.homepage = "http://github.com/kevTheDev/seed_dumper"
-  s.summary = "Create seed files for each model from your database data"
+  s.version = '0.1.4'
+  s.authors = ["Rob Halff", "Kevin Edwards", "David Debreczeni"]
+  s.homepage = "http://github.com/debreczeni/seed_dumper"
+  s.summary = "Create seed files for models based on your model files and database data"
   s.description = "#{s.summary}."
-  s.email = "kev.j.edwards@gmail.com"
- 
+  s.email = "david.debreczeni@gmail.com"
+
   s.extra_rdoc_files = [
     "README.rdoc"
   ]
@@ -29,9 +28,8 @@ Gem::Specification.new do |s|
     "lib/tasks/seed_dumper.rake",
     "seed_dumper.gemspec"
   ]
-  s.homepage = %q{http://github.com/kevTheDev/seed_dumper}
   s.require_paths = ["lib"]
-  s.add_runtime_dependency 'rails'
+  s.add_dependency 'rails'
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{{Seed Dumper for Rails}}
   s.test_files = [
