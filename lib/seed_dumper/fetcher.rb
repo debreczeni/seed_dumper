@@ -17,7 +17,7 @@ module SeedDumper
 
         record.attributes.each do |key, value|
           next if ignore.include?(key)
-          value = value.class == Time ? "\"#{value}\"" : value.inspect
+          value = value.class == Time ? "\"#{value}\"" : "#{value}".inspect
           value = nil if value.is_a?(String) && value == "\"\""
           value = nil if value == 'nil' || value == "nil"
           next if value.nil?
